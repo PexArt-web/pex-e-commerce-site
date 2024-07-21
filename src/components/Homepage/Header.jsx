@@ -29,7 +29,7 @@ const Header = () => {
             <li>Sign Up</li>
           </ul>
           <span className="d-flex gap-4">
-            <form class="input-group mb-3">
+            <form className ="input-group mb-3">
               <input
                 type="text"
                 className="form-control"
@@ -42,7 +42,7 @@ const Header = () => {
                 type="button"
                 id="button-addon2"
               >
-                <i class="bi bi-search"></i>
+                <i className ="bi bi-search"></i>
               </button>
             </form>
             <div>
