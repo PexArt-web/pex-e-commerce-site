@@ -1,6 +1,13 @@
 import Header from "./Header";
+import AllProductCart from "./sections/AllProducts/AllProductCart";
+import AllProducts from "./sections/AllProducts/AllProducts";
 import BrowseCategory from "./sections/BrowseCategory/BrowseCategory";
 import ShowFlash from "./sections/FlashSales/showFlash";
+import Footer from "./sections/Footer/Footer";
+import Arrivals from "./sections/NewArrival/Arrivals";
+
+
+import Single from "./sections/Single";
 import TopSection from "./sections/TopSection/TopSection";
 
 const LandingPage = () => {
@@ -32,18 +39,40 @@ const LandingPage = () => {
       price: 60,
     },
   ];
-  const carouselElement = landingCart.map(cart => {
-    return cart
-  })
+  const carouselElement = landingCart.map((cart) => {
+    return cart;
+  });
+
+  const singleCart = [
+    {
+      id: 1,
+      category: "Furniture",
+      title: "Sleek Modern Leather Sofa",
+      image:
+        "https://yard-sale-store.vercel.app/_next/image?url=https%3A%2F%2Fi.imgur.com%2FQphac99.jpeg&w=640&q=75",
+      price: 53,
+      discription:
+        "Enhance the elegance of your living space with our Sleek Modern Leather Sofa. Designed with a minimalist aesthetic, it features clean lines and a luxurious leather finish. The robust metal legs provide stability and support, while the plush cushions ensure comfort. Perfect for contemporary homes or office waiting areas, this sofa is a statement piece that combines style with practicality.",
+    },
+  ];
+  const singleProduct = singleCart.map((product) => (
+    <Single key={product.id} {...product} />
+  ));
+
   return (
-    <div className="">
+    <div className="bg-light">
       <main>
-        <Header/>
-        <TopSection cart = {carouselElement}/>
+        <Header />
+        <TopSection cart={carouselElement} />
         <hr />
-        <ShowFlash/>
+        <ShowFlash />
         <hr />
-        <BrowseCategory/>
+        <BrowseCategory />
+        <hr />
+        {singleProduct}
+        <AllProducts />
+        <Arrivals />
+        <Footer/>
       </main>
     </div>
   );

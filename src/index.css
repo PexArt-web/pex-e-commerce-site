@@ -25,16 +25,17 @@
   padding: 2px;
   color: #fff;
 }
-.today--nav, .browseCategory--title {
+.today--nav, .browseCategory--title, .allProducts--title, .featured--nav {
   border-left: 15px solid #db4444;
   color: #db4444;
   border-radius: 4px;
 }
 .iconCategory{
   border: 2px solid #000000;
-  width: fit-content;
+  width: 12rem;
+  height: 5rem;
   text-align: center;
-  padding: 20px;
+  padding: 12px;
 }
 
 

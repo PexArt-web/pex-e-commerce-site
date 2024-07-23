@@ -1,9 +1,9 @@
-const CategoryIcons = () => {
+const CategoryIcons = ({id, iconTitle, icons}) => {
   return (
     <div>
       <div className="iconCategory rounded">
-      <i className="bi bi-phone"></i>
-        <p>TITLE</p>
+      <div>{icons}</div>
+        <p>{iconTitle}</p>
       </div>
     </div>
   )
